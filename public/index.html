@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ESP IoT Firebase App</title>
+
+    <!-- update the version number as needed -->
+    <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=mxtfhQJCqydoEFu_0lUe0peOshTE1s9AG0Nq5IMYMauMI-R3Wkk1xKmCIdC1DrtDlStRhUVl45I4eEJkg02wikZnsspf0FUONRycMEGjlHde_jJZgeYfvQmqGkBLUwIW9tiEVjXi7zhpq03C0FTueIbAeWt1MpNe27ARt6Ai3h2dhRnmuhQozvz5j1tYrkKZ0cyOh9PUBV94ps2e7rexeHfOzIIgd2nOkT2f8t3eiFXG6h6utheaAudmoPNU_FdFWSKtXDXrthEHs-GqDbDO-QFF25Eh7i1IdKtb8Yn0C9h6yH_-fMsX890DGqJZo5xel8RbFWrpviTSRWOjr-OKIgxaqL5Cx8_h4m4Afg95rXh2Ij_jT8fe3CrfG1A7KavS5tNNssFof20d_rS7DOmmi38F4SEt8ZO3iNb4W2ke28VN7WDT2eFNGJaU8Y2nbgq7gq3dxXoiV1CHNjAIunZrvXClDJDtwUX-1nStyCECUjyQ9MBEToq6LB0XNv2Jhy7taEbsipHFSl5SNM4UGO5VO4gABE7B_oOL3qlCu1yjVex1Hr_CvNsriIDOc9zzoUzGQb-wuuCnAgu3rtaQk_n2qW7ZxTvu_s0gnwuIApF4E_w7f69ySuVKkS0Ho5iVRUakUQNMRf9i_9q-MsR-MnLFQCZ-okPUHx6LUSKoekLB-5ci7zaTUorFPUb-jRaehoKs26uAiUnvt6F3rIPC9Q8ixS7PYVO_7sm2iywNkclUfjG5NB0KQ5-MZTf3wC5PJL_ceS0YB8Wn4relIiebcZ7ebyI6D4WzqWLejXTGjku15Us1J2zUh6eVnE-cWbDAljZzo08BrcCO8nCTDTtf1GBu9ouaaPPGsixFapQV04-ek7iLRVM_yFRoaF-fe2Bc2Px39L64AtzM35E4y3oJmliyK4Z8gJORULt6359Oj2GF6ruXFuiNtCtuxJb6CbFw4ipELe8IgMALUs0cKtW-WD1FBi6qV7MKXgy4wDwpdGkMO4x13QYBfI_-t54tdEFfzbbhQemmJt7hKvWBSuAvUvbkdrJbvUbtMWH5BgklgRDQUFFd1LWVCeTv8dfJpMVbgrefrSwVJDNBc_ejsfDdUkB72ZMmhGQdryNTOwjAqanoRgombu3iVIZRQQ87fPxjxUxruVNK9Qx5_dwIwOayWAv2jvQYUUnqEwMgXh8BE1JXd4gdNkjyjo-l1cdw77GudosouU5SS5eXnVEHlw8RS0h49Foj23zYFjdC_OCn1I8Tvz3hbIpAvEwmUioQjRDMCNhnaYoCuQ-m7PyvOrJY6TyQxZ3WXEI8bxnORq-yRQOUQEDrpssboegCKDZLWUCHyHqk7QSLyu88z5ZKycvcjelNSxMUk6tkUqNc89YKD4oo1BQO9FUGChcZJoT071lOlV9t29H3PL7zjBrzwBAmnBGO0h7zxlAaRQZDBRFNE9orl69e4ycIQ9R7tNtNHiBmGCp5hHGEzM3xvce4MnVpWNg27ZPtJviPuTpAeUEVQLURIGR00dDsmGExfq9c6W-82p-5c2qqn9yno6T6km8xC7KN2ZNGqRwaqueAdLvk-tCG5AA" charset="UTF-8"></script><script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+    <!-- include only the Firebase features as you need -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script>
+     // REPLACE WITH YOUR web app's Firebase configuration
+     const firebaseConfig = {
+      apiKey: "AIzaSyCPOzB7mc65J8G1jJME0hc4adKcI_oSKro",
+      authDomain: "webpage-49651.firebaseapp.com",
+      databaseURL: "https://webpage-49651-default-rtdb.firebaseio.com",
+      projectId: "webpage-49651",
+      storageBucket: "webpage-49651.appspot.com",
+      messagingSenderId: "1088480723779",
+      appId: "1:1088480723779:web:6f35d612a35e772847a5f6",
+      measurementId: "G-CL61SLS54G"
+      };
+      
+      // Initialize firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Make auth and database references
+      const auth = firebase.auth();
+      const db = firebase.database();
+
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!--TOP BAR-->
+  <div class="topnav">
+    <h1>Firebase Web App <i class="fas fa-clipboard-list"></i></h1>
+  </div>
+
+  <!--AUTHENTICATION BAR (USER DETAILS/LOGOUT BUTTON)-->
+  <div id="authentication-bar" style="display: none;">
+    <p><span id="authentication-status">User logged in</span>
+       <span id="user-details">USEREMAIL</span>
+       <a href="/" id="logout-link">(logout)</a>
+    </p>
+  </div>
+
+  <!--LOGIN FORM-->
+  <form id="login-form" style="display: none;">
+    <div class="form-elements-container">
+      <label for="input-email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Username" id="input-email" required>
+
+      <label for="input-password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="input-password" required>
+
+      <button type="submit" id="login-button">Login</button>
+      <p id="error-message" style="color:red;"></p>
+    </div>
+  </form>
+
+  <!--CONTENT (SENSOR READINGS)-->
+  <div class="content-sign-in" id="content-sign-in" style="display: none;">
+    <div class="cards">
+      <!--TEMPERATURE-->
+      <div class="card">
+        <p><i class="fas fa-thermometer-half" style="color:#059e8a;"></i> TEMPERATURE</p>
+        <p><span class="reading"><span id="temp"></span> &deg;C</span></p>
+      </div>
+      <!--HUMIDITY-->
+      <div class="card">
+        <p><i class="fas fa-tint" style="color:#00add6;"></i> HUMIDITY</p>
+        <p><span class="reading"><span id="hum"></span> &percnt;</span></p>
+      </div>
+      <!--PRESSURE-->
+      <!--<div class="card">
+        <p><i class="fas fa-angle-double-down" style="color:#e1e437;"></i> PRESSURE</p>
+        <p><span class="reading"><span id="pres"></span> hPa</span></p>
+      </div>-->
+    </div>
+  </div>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
